@@ -1,8 +1,9 @@
 package com.care.di_ex02;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class MemberDAO {
 	
 	public MemberDAO() {

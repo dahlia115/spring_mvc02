@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-@Service
+@Service("ms1")
 public class MemberService {
 	@Autowired
 	MemberDAO dao;
