@@ -4,19 +4,26 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
 	<!-- The definition of the Root Spring Container shared by all Servlets 
-		and Filters -->
+		and Filters -->	
+	<!-- 디비 관련 설정을 한다 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
 	</context-param>
 
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<!-- 이벤트 관련 설정 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
 
 	<!-- Processes application requests -->
+	<!-- 
+	 DispatcherServlet의 이름은 appServlet로 사용할 것이며,
+	 DispatcherServlet의 설정은 servlet-context.xml에 위치하고,
+	 해당 appServlet은 1번째로 로드 하겠다
+	 -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet
@@ -33,6 +40,7 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>
