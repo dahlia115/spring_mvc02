@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller		//context:component-scan에 등록 해야한다.
+@Controller	
 public class MemberController {
 	MemberService ms;
 	public MemberController() {

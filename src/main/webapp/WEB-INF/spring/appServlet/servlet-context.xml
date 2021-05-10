@@ -26,7 +26,8 @@
 	
 	<!-- 해당하는 위치 , 또는 하위의 패키지들에 있는 어노테이션을 빈으로 등록해준다. -->
 	<context:component-scan base-package="com.care.root" />
-	<context:component-scan base-package="com.care.di_ex01" />
+	<!-- <context:component-scan base-package="com.care.di_ex01" />-->
+	<context:component-scan base-package="com.care.di_ex02" />
 	
 	
 	
