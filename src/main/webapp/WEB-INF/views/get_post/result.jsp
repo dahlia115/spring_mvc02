@@ -10,6 +10,8 @@
 	${method }<br>
 	${name }<br>
 	${age }<br>
-	
+	<hr>
+	dto.name : ${dto.name }<br>
+	dto.age : ${dto.age }<br>
 </body>
 </html>
