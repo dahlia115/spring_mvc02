@@ -16,6 +16,8 @@
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<!-- 정적 파일을 올리는 위치 지정 css, js, img -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/img/**" location="/resources/img/" /><!-- 경로추가 -->
+	<resources mapping="/css/**" location="/resources/css/" /><!-- 경로추가 -->
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<!-- *.jsp 파일의 경로를 만들어 주는 역할 -->
