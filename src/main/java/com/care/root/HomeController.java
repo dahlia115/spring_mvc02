@@ -14,6 +14,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * Handles requests for the application home page.
@@ -44,12 +45,19 @@ public class HomeController {
 		return "re/index";
 	}
 	@RequestMapping("re/result")
-	public String result(HttpServletRequest request) {
+	public String result(HttpServletRequest request, Model model,
+											RedirectAttributes ra) {
 		String id = request.getParameter("id");
 		System.out.println(id);
 		logger.info("------"+id+"------");
 		if(id.equals("abc")) {
-			return "redirect:rsOK";
+			//model.addAttribute("success","로그인 성공!!!");
+			ra.addFlashAttribute("success","RedirectAttributes를 통한 전달");
+			TestDTO dto = new TestDTO();
+			dto.setId("dto를 통한 아이디 저장");
+			ra.addFlashAttribute("dto",dto);
+			//return "re/rsOK";
+			return "redirect:rsOK"; //한번 더 경로를 타면 모델 값이 사라짐
 		}
 		return "redirect:rsNO"; //redirect 컨트롤러로 연결한다.
 	}
