@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>rsNO.jsp<br>
-
+	<h1>rsNO 인증 실패</h1>
 </body>
 </html>
